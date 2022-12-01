@@ -3,9 +3,12 @@
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --primary-white-color: #ffffff;
+
   --buttons-bg-color: #f5f4fa;
   --hero-bg-color: #2f303a;
+  --hero-gradient-color: rgba(47, 48, 58, 0.4);
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
+
   --header-border-color: #ececec;
   --prtfolio-border-color: #eeeeee;
 }
@@ -161,7 +164,25 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-  background-color: #2f303a;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 1600px;
+  height: 600px;
+
+  background-color: var(--hero-bg-color);
+
+  background-image: linear-gradient(
+      to right,
+      var(--hero-gradient-color),
+      var(--hero-gradient-color)
+    ),
+    url('../images/HeaderImg.jpg');
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
