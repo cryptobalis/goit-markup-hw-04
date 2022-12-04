@@ -11,6 +11,9 @@
 
   --header-border-color: #ececec;
   --prtfolio-border-color: #eeeeee;
+
+  --icon-color: #afb1b8;
+  --footer-media-bg-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -144,7 +147,9 @@ img {
 }
 
 .header-contacts {
-  display: block;
+  display: flex;
+  align-items: center;
+  /* display: block; */
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
@@ -156,6 +161,19 @@ img {
 .header-contacts:hover,
 .header-contacts:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
+}
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.icon-contacts {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /* Hero */
@@ -218,6 +236,7 @@ img {
 }
 
 /* Features */
+
 .feature-list {
   display: flex;
   gap: 30px;
@@ -226,9 +245,11 @@ img {
 .feature-list .item {
   flex-basis: calc((100% - 90px) / 4);
 }
+
 /* .feature-list .item + .item {
   margin-left: 30px;
 } */
+
 .section.features {
   padding-bottom: 0;
 }
@@ -254,6 +275,16 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+.features-thumb {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  background-color: var(--buttons-bg-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Section */
 
@@ -271,14 +302,22 @@ img {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
+
 /* Works */
+
 .works {
   display: flex;
+  gap: 30px;
 }
 
-.works .item + .item {
-  margin-left: 30px;
+.works .item {
+  flex-basis: calc((100% - 60px) / 3);
 }
+
+/* .works .item + .item {
+  margin-left: 30px;
+} */
+
 /* Team */
 
 .section.team {
@@ -315,11 +354,80 @@ img {
 
 .position {
   margin-top: 10px;
+  margin-bottom: 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.1875;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.links-list {
+  padding: 0;
+  display: flex;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+  gap: 10px;
+}
+.media-link {
+  display: flex;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icon-color);
+}
+
+.media-link:last-child {
+  margin-right: 0;
+}
+
+.media-link:hover,
+.media-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--primary-white-color);
+}
+
+/* Partners */
+
+.partners-list {
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+.partners-list .item {
+  flex-basis: calc((100% - 150px) / 6);
+}
+
+/* .list .partners-item + .partners-item {
+  margin-left: 30px;
+} */
+.partners-thumb {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+}
+.partners-link {
+  display: flex;
+  border-radius: 4px;
+  fill: var(--icon-color);
+  border: 1px solid var(--icon-color);
+}
+
+.partners-link:hover,
+.partners-link:focus {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 /* Footer */
 
@@ -363,7 +471,47 @@ img {
   color: var(--accent-color);
 }
 
+.footer > .container {
+  display: flex;
+  align-items: baseline;
+}
+.media-footer {
+  margin-left: 70px;
+}
+.join {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  margin-bottom: 20px;
+}
+.footer-media {
+  display: flex;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: var(--footer-media-bg-color);
+  justify-content: center;
+  align-items: center;
+  fill: var(--primary-white-color);
+}
+
+.footer-media:last-child {
+  margin-right: 0;
+}
+
+.footer-media:hover,
+.footer-media:focus {
+  background-color: var(--accent-color);
+}
+
 /* Portfolio */
+
 .portfolio-buttons {
   margin-bottom: 50px;
   display: flex;
@@ -378,6 +526,11 @@ img {
 .project-list > .item {
   margin-right: 30px;
   margin-bottom: 30px;
+}
+
+.project-list > .item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-list > .item:nth-child(3n) {
