@@ -5,7 +5,9 @@
   --primary-white-color: #ffffff;
 
   --buttons-bg-color: #f5f4fa;
-  --hero-bg-color: #2f303a;
+  --footer-bg-color: #2f303a;
+  --hero-bg-color: #c4c4c4;
+
   --hero-gradient-color: rgba(47, 48, 58, 0.4);
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
 
@@ -151,7 +153,6 @@ img {
 .header-contacts {
   display: flex;
   align-items: center;
-  /* display: block; */
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
@@ -166,16 +167,8 @@ img {
   fill: var(--accent-color);
 }
 .icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: currentColor;
   fill: currentColor;
-}
-.icon-contacts {
   margin-right: 10px;
-  fill: currentColor;
 }
 
 /* Hero */
@@ -189,7 +182,6 @@ img {
   margin-right: auto;
 
   max-width: 1600px;
-  height: 600px;
 
   background-color: var(--hero-bg-color);
 
@@ -417,8 +409,6 @@ img {
   display: flex;
   width: 170px;
   height: 92px;
-  justify-content: center;
-  align-items: center;
 }
 
 .partners-link {
@@ -439,7 +429,7 @@ img {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: var(--hero-bg-color);
+  background-color: var(--footer-bg-color);
 }
 
 .footer .logo {
@@ -533,7 +523,12 @@ img {
   margin-bottom: 30px;
 }
 
-.project-list > .item:hover {
+.project-list .project {
+  display: block;
+}
+
+.project-list .project:hover,
+.project-list .project:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
